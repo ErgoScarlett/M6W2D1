@@ -1,0 +1,27 @@
+1. Trova tutte le risorse con il dato isActive corrispondente a true
+   { "isActive" : { "$eq" : true } }
+   Trovati 51 elementi corrispondenti
+
+2. Trova tutte le risorse con il dato age maggiore di 26
+   { "age" : { "$gt" : 26 } }
+   Trovati 54 elementi corrispondenti
+
+3. Trova tutte le risorse con il dato age maggiore di 26 e minore di o uguale a 30
+   { "age" : { "$gt" : 26, "$lte" : 30 } }
+   Trovati 19 elementi corrispondenti
+
+4. Trova tutte le risorse con il dato eyeColor che sia brown o blue
+   { "eyeColor" : { "$in" : [ "brown", "blue" ] } }
+   Trovati 66 elementi corrispondenti
+
+5. Trova tutte le risorse che non presentano il dato eyeColor uguale a green  
+   { "eyeColor" : { "$ne" : "green" } }
+   Trovati 66 elementi corrispondenti
+
+6. Trova tutte le risorse che non presentano il dato eyeColor uguale a green e neanche a blue   
+   { "eyeColor" : { "$nin" : [ "green", "blue" ] } }
+   Trovati 35 elementi corrispondenti 
+
+7. Trova tutte le risorse con il dato company uguale a "FITCORE" e ritorna solo l'email
+  { "company" : { "$eq" : "FITCORE" } } + Project: { "email" : 1 } 
+  Trovato 1 elemento corrispondente    
